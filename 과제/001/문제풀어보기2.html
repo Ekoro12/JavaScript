@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1.prompt 사용자입력
+      // 점수를 입력받아서 학점을 출력해 봅시다
+      score = Number(prompt("점수를 입력하세요."));
+      if (score >= 90) {
+        document.write("A학점입니다.");
+      } else if (score >= 80) {
+        document.write("B학점입니다.");
+      } else {
+        document.write("F학점입니다.");
+      }
+      document.write("<br><hr>");
+
+      // 2. 1번 ) 1번 문제를  3번 반복하기
+
+      for (let i = 0; i < 3; i++) {
+        score2 = Number(prompt("점수를 입력하세요. 3번반복"));
+        if (score2 >= 90) {
+          document.write("A학점입니다.");
+        } else if (score2 >= 80) {
+          document.write("B학점입니다.");
+        } else {
+          document.write("F학점입니다.");
+        }
+        document.write("<br>");
+      }
+      document.write("<br><hr>");
+      //    2번 ) 1번 문제를  점수가 음수가 음력되기 전까지 반복하기
+
+      // let score3 = prompt("점수를 입력하세요. 음수");
+      // if(score3 >= 0){
+      //    while(score3 >= 0){
+      //       prompt("점수를 입력하세요. 음수");
+      //    }
+      // }
+
+      // 1.
+      // 점수를입력받는다
+      // 점수에 대한 학점을 구한다
+      // 점수 출력
+      // 2.1
+      // 반복 (3번)
+      // -점수를입력받는다
+      // -점수에 대한 학점을 구한다
+      // -점수 출력
+      // 2.2
+      // 반복 (음수입력되기전까지)
+      // -점수를입력받는다
+      // -점수에 대한 학점을 구한다
+      // -점수 출력
+
+      // 3.  구구단 ( 2단 출력)
+      //    - console.log( )
+      //    - document.write()
+      for (let i = 1; i <= 9; i++) {
+        document.write(2 * i + "<br>");
+      }
+      document.write("<hr>");
+
+      // for(let j=1; j<=9; j++){
+      //       for(let i=1; i<=9; i++){
+      //           document.write(j*i + "<br>");
+      //       }
+      //   }
+      for (let i = 1; i <= 9; i++) {
+        for (let j = 1; j <= 9; j++) {
+          document.write("<p>" + i + "곱하기" + j + "= " + i * j + "</p>");
+        }
+        document.write("<hr>");
+      }
+
+      // 4.  2~5단까지 출력하기 ( 2~5단)
+      for (let i = 2; i <= 5; i++) {
+        for (let j = 1; j <= 9; j++) {
+          document.write(i * j + "<br>");
+        }
+        document.write("<hr>");
+      }
+
+      // 5. 별출력  (단 *별 한개를 이용하기)
+      let star = "*";
+      //    1)*
+      document.write("*");
+      document.write("<br><br>");
+      //    2) *****
+      for (let i = 0; i < 5; i++) {
+        document.write("*");
+      }
+      document.write("<br><br>");
+
+      //    3) *****
+      //       *****
+      //       *****
+      for (let a = 0; a < 3; a++) {
+        for (let b = 0; b < 5; b++) {
+          document.write("*");
+        }
+        document.write("<br>");
+      }
+
+      //    4) *
+      //       **
+      //       ***
+      for (let c = 0; c < 4; c++) {
+        for (let d = 0; d < c; d++) {
+          document.write("*");
+        }
+        document.write("<br>");
+      }
+      document.write("<br><br>");
+
+      //    5) ***
+      //       **
+      //       *
+      document.write("<br><hr>");
+      // 6. 구구단 while, do~ while  해결하기
+
+      let e = 1;
+      while (e <= 9) {
+        let f = 1;
+        while (f <= 9) {
+          document.write("<p>" + e + "곱하기" + f + "= " + f * e + "</p>");
+          f++;
+        }
+        e++;
+        document.write("<br>");
+      }
+    </script>
+  </body>
+</html>
