@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="webBtn">랜덤 버튼</button>
+    <div id="webtoonInfo"></div>
+
+    <script>
+      let webBtn = document.getElementById("webBtn");
+
+      const webtoonAll = [
+        {
+          name: "잔불의 기사",
+          author: "환댕",
+          genre: "판타지",
+          image: "../image/잔불의 기사.jpg",
+          toString: function () {
+            return this.name + " 작가: " + this.author + " 장르: " + this.genre;
+          },
+        },
+        {
+          name: "마음의소리2",
+          author: "조석",
+          genre: "개그",
+          image: "../image/마음의소리2.jpg",
+          toString: function () {
+            return this.name + " 작가: " + this.author + " 장르: " + this.genre;
+          },
+        },
+        {
+          name: "별을 품은 소드마스터",
+          author: "홍대의, 주노, Q10",
+          genre: "판타지",
+          image: "../image/별을 품은 소드마스터.jpg",
+          toString: function () {
+            return this.name + " 작가: " + this.author + " 장르: " + this.genre;
+          },
+        },
+        {
+          name: "화산귀환",
+          author: "LICO, 비가",
+          genre: "무협",
+          image: "../image/화산귀환.jpg",
+          toString: function () {
+            return this.name + " 작가: " + this.author + " 장르: " + this.genre;
+          },
+        },
+      ];
+      webBtn.addEventListener("click", function () {
+        let randomIndex = Math.floor(Math.random() * webtoonAll.length);
+        let webtoon = webtoonAll[randomIndex];
+
+        let webtoonInfoDiv = document.getElementById("webtoonInfo");
+        webtoonInfoDiv.innerHTML = "";
+
+        let webtoonName = document.createElement("h2");
+        webtoonName.textContent = webtoon.name;
+
+        let webtoonAuthor = document.createElement("p");
+        webtoonAuthor.textContent = "작가: " + webtoon.author;
+
+        let webtoonGenre = document.createElement("p");
+        webtoonGenre.textContent = "장르: " + webtoon.genre;
+
+        let webtoonImage = document.createElement("img");
+        webtoonImage.src = webtoon.image;
+        webtoonImage.alt = "웹툰 이미지";
+
+        webtoonInfoDiv.appendChild(webtoonName);
+        webtoonInfoDiv.appendChild(webtoonAuthor);
+        webtoonInfoDiv.appendChild(webtoonGenre);
+        webtoonInfoDiv.appendChild(webtoonImage);
+      });
+    </script>
+  </body>
+</html>

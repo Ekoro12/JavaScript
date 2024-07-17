@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // splice 매서드: 특정 요소를 제거할 수 있다. 원본배열의 크기가 줄어든다.
+        // 반환값 => 삭제된 요소를 배열로 반환한다.
+        let arr = ["one", "two", "three", "four"];
+
+        let deleteArr = arr.splice(0,1); // (a,b) a번 부터 b개를 지운다
+        console.log(deleteArr);
+        let deleteItem = deleteArr[0];
+        console.log(deleteItem);
+        console.log(arr);
+    </script>
+</body>
+</html>
