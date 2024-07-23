@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 1200px;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+        header{
+            /* border: 1px solid black; */
+            height: 100px;
+            background-color: rgb(245, 248, 248);
+            /*  */
+            position: relative;
+        }
+        nav{
+            height: 60px;
+            background-color: rgb(232, 243, 243);
+            /* border: 1px solid black; */
+            display: flex;
+            align-items: center;
+        }
+        /* section{
+            height: 400px;
+            background-color: aqua;
+        } */
+        footer{
+            height: 60px;
+            /* border: 1px solid black; */
+            background-color: rgb(233, 239, 239);
+            display: flex;
+            
+
+            padding: 10px;
+            
+        }
+        footer > div{
+            width: 33%;
+            /* border: 1px solid black; */
+            height: 60px;
+            line-height: 60px; /* height과 값이 같을 때 높이를 중앙에 맞춤 */
+            text-align:center;
+        }
+
+        header .img{
+            width: 200px;
+            height: 60px;
+
+            background-image: url(images/logo.png);
+            background-position: center;
+            background-size: cover;
+
+            margin-top: 10px;
+            /*  */
+            position: absolute;
+            /* top, left, right, bottom */
+            left: 30px;
+            top:  10px;
+        }
+         /*검색바 css*/
+         header .search{
+            width: 300px;
+            height: 50px;
+            /* border:1px solid black; */
+
+            display: flex;
+
+            position:absolute;
+            right: 0px;
+            bottom: 5px;
+
+            margin-bottom: 20px;
+        }
+        .search input{
+            width: 230px;
+            margin-left: 20px;
+
+            border: none;
+            outline: none;
+        }
+        .search_btn{
+            width: 50px ;
+            height: 50px;
+            background-color: antiquewhite;
+            background-image: url( https://previews.123rf.com/images/swavo/swavo1409/swavo140900005/31571158-%EB%8F%8B%EB%B3%B4%EA%B8%B0-%EC%95%84%EC%9D%B4%EC%BD%98.jpg) ;
+            background-position: center;
+            background-size: cover;
+        }
+
+        /* nav */
+        nav ul{
+            margin: 0;
+            list-style: none;
+            /*  */
+            display: flex;
+        }
+
+        nav ul li{
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        /* 회원가입 만들기 */
+
+        
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+
+        <header>
+            <!-- 로고 이미지 -->
+            <div class="img"></div>
+
+                 <!-- 검색바 -->
+             <div class="search">
+                 <input type="text">
+                 <div class="search_btn"></div>
+             </div>
+        </header>
+
+        <!-- nav -->
+        <nav>
+            <ul>
+                <li><a href="login.html"> 로그인 </a></li>
+                <li><a href="joinus.html"> 회원가입 </a></li>
+                <li><a href="index6.html"> 홈으로 </a></li>
+            </ul>
+        </nav>
+
+        <!-- section -->
+        <section>
+
+        </section>
+
+        <!-- footer -->
+        <footer>
+            <div><img src="images/footer_acorn.png"></div>
+            <div>(주)에이콘이즈 에이콘아카데미(홍대)</div>
+            <div>COPYRIGHT(C) HBILAB ALL RIGHTS RESERVED.</div>
+        </footer>
+    </div>
+</body>
+</html>

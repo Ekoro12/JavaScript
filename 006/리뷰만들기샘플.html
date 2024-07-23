@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=JetBrains+Mono:wght@100&family=Righteous&display=swap" rel="stylesheet">
+
+    <style>
+        body{  font-family: 'Black Han Sans', sans-serif }	 
+       	 
+
+        .wrap{
+            width: 820px;
+            border:1px solid black;
+            padding: 20px;
+            box-sizing: border-box;
+            /* height: 700px; */
+            margin: 0 auto;
+
+
+            /* 부모로 정하기*/
+            position: relative;
+        }
+
+        /* 리뷰타이틀 영역*/
+        .review_title{
+            text-align: center;
+        }
+        
+        /* 리뷰 첫번재 행*/
+
+        .review_row1{
+            display: flex;
+        }
+
+        .review_row1 > div{
+            /* border:1px solid black; */
+            width: 50%;     
+            text-align: center;       
+            margin-bottom: 10px;
+        }
+
+        .review_row1 .img_col img{
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+        }
+
+        .content_col textarea{
+            width: 90%;
+            height: 150px;
+            resize: none;
+        }
+
+        .review_row2{
+            /* border: 1px solid black; */
+            width: 85%;
+            display: flex;
+            margin: 40px auto;
+        }
+
+        .review_row2 .row2{
+            text-align: center;
+            width: 75%;
+        }
+
+        .review_row2 .row2 .row2-box{
+            /* border: 1px solid black; */
+            height: 25px;
+            margin-left: -1px;
+        }
+
+        .review_row2 .row2 .row2-box input{
+            /* border: none; */
+            width: 97%;
+            height: 80%;
+            outline: none;
+        }
+
+        .review_row3{
+            width: 95%;
+            margin: 40px auto;         
+        }
+
+        .review_row3 .row3-box{
+            border: 1px solid gray;
+            width: 99.8%;
+            height: 20px;
+            outline: none;
+        }
+
+        .review_row4{
+            width: 95%;
+            margin: 40px auto;
+            margin-bottom: 10px;
+        }
+
+        .review_row4 textarea{
+            width: 100%;
+            height: 100px;
+            resize: none;
+        }
+
+        /* 좋아요 영역 배치하기*/
+        .Thumbs{
+            /* border: 1px solid black; */
+            margin-left: 17px;
+            width: 300px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .like, .bad{
+            /* 부모크기를 기준으로 위치 정하기*/
+            /* position: absolute; */
+            /* right: -70px; */
+            /* bottom: 60px; */
+            margin-top: 20px;
+        }
+        .like:hover, .bad:hover{
+            cursor: pointer;
+        }
+        .Thumbs img{
+            width: 50px;
+            height: 50px;
+        } 
+    </style>
+</head>
+<body>
+    
+
+    <div class="wrap">
+        <!-- 첫번째 층-->
+        <div class="review_title">
+            <h1>REVIEW DETAIL</h1>
+        </div>
+        <!-- 두번째 층-->
+
+        <div class="review_row1">
+            <div class="img_col">
+                 <h4>이미지</h4>
+                 <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8PEhIPDRAQDg0PDw8PDQ0NEA8QDQ0NFRIWFhURFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDQ0OFQ8NFS0ZFRkrLS0tKystKy0tKy0tLS03KystLTcrLSs3Ky03LSsrKysrLSsrNy0rLS0rLSsrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAbAAEBAAIDAQAAAAAAAAAAAAAABQIHAwQGCP/EAEQQAQACAQECBwsHCwUBAAAAAAABAgMEBREGBxIhMTSzE0FRYXFzdIGRstEzQlJykqGxIiUyNVRiY4KDosEjJKPC8Bb/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAMAwEAAhEDEQA/AN4gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8Jwq4eZNLmyabDhpy8fJ35M1p3W31i2+KRu5ufp3vMZ+H+0bfo5MePzeKk+9vd/jh2ZuyYdVWOa9Zw5J/frvtWfXE2+y1/itPemY8lrQD0eThjtK3TqskfVrir+FXBPCfaP7Xm+3KNky3+lPtifxdDPlv8ASt6twPT/AP0+0P2vP9uWVeFW0Y541eb123x97xN89/p3+1LjtktPTa0+WQbCxcO9pU6dTv8AFkx4Z/6r3B7jI1GXPiwZqYc3dslMUTi5VLxNpiOV0zE7undzdDTm7/2+Ww+JrZMZdZOeY/J0uObb/wCLk30r93dJ9QN4AAAAAAAAAAAAAAAAAAAAAA8dxqanDXRTTJXlZMmSkaeN/PXJHPN/JFeVH80R32maTb6MT5J3Pa8amrvk1ncpn8jBjpFK+O8cq0+Wd8R6oeUw4Z8E+pUrr3m30J9U1+Loai0x00t/b8V2+OfBPsTNWCNe/wC7b7vi45yT9G39vxdy8OO1UVwVvbwRHlluTiO1+Kceo0/Jiuo5dc0259+XDuiu7+WffjxtPTD0fAHXXwa/S2pO7l58eG/gtTLaKTE/a3+WIB9IAAAAAAAAAAAAAAAAAAAAAA0lxjWmdo5/F3GI8f8Ao0+KXpHd4xKb9o6md9qzysXPWf4GPvdEpWjxZPm5Y/qY4t7s1EUMnNCPr5VMtc+7dNsFv6eWk+/KLru6R0xj9Vr/AABOyOGzK9rb/m+2XHPK8NfszP8AkVjKpwZmY1elmOmNXpZiO/8ALUSZifD7IiPx3qnByv8AudPPPMxqdP0z/FqD6gAAAAAAAAAAAAAAAAAAAAABo/jE/WOp+th7DGmaFU4x4/OOo8fcZ/4caVoQd/LPMhbRXcvQg7RQRsjCWd3HLSsZU+DvWdP6Tg7WqYp8Hes6f0nB2tUR9PgAAAAAAAAAAAAAAAAAAAAA0nxlR+cc31cPZVR9Es8ZsfnDL9TD2dUXRg7+ToRNo99av0Im0pQRbuOXJdx2aVhKnwe6zp/ScHaVTJU+D/WNP6Rg7SqI+oAAAAAAAAAAAAAAAAAAAAAAaV4z/wBYX83h9yEPRyu8aPX7+aw+6gaMFDJ0Ie0VvJPMh7QSCRZhZndx2aVio7B6xg9Iw9pVNUtg9YwekYe0qiPqEAAAAAAAAAAAAAAAAAAAAAGl+NPr9vHixfhLz2kl6PjW6/8A0MX42eb0gO/foRdoLNuhF2ikEizCWV+lhLSsVHYPWMHn8PaVTpUdhfL4PP4e0qiPqIAAAAAAAAAAAAAAAAAAAAAGmuNnr0ej4veu8xpHqONvr1fRsXv5HldJIKF55kbaErF55kbXpBJuwllfpYS0MZUdhfL4PP4e0hOUdh/L4PP4e0hB9RgAAAAAAAAAAAAAAAAAAAAA05xu9er6Li7TI8npXreN7rtPRcXaZHkdLIjv3nmSNcq26EnXJFSbsJZ3lhLQxUNh/L4PP4e0hOUdh/L4PP4ffhB9SAAAAAAAAAAAAAAAAAAAAAA1bxx7NycvDq4jfi5HcL2j5l4ta1d/infPs8cNe6az6M1+jx6jHfDmrF8WSs1vWe/H+J7+/vbmpdu8Vmrx2m2gyVz4t++uPJbuWevgjfP5NvLvr5Aeatk5kvW2UNZwd2th/T0mp5u/THOWPbTfCTqNJq+i+DPWfBbBlifvhNg6F5YueNn6iZ5sGeZ8EYcsz+Dt6bg1tHLzU0Wrny6fLWPbaIg0S1/gVsvJqtZgxYo3zGWmS9u9TFS0WvafVHrmYjvq+yeK3amaY7rjx6WnNvtnyVm27wxWnK3z4p3NucDeCWDZmOa45nLnybu7ai0RFr7uitY+bWPBz+OZUeiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB//Z" alt="300 * 300 size image">
+            </div>
+            <div class="content_col">
+                <h4>후기</h4>
+                <textarea></textarea>
+
+        <!-- like 층 :리뷰박스를 기준으로 원하는 곳에 배치하기 -->
+                <div class="Thumbs">
+                    <div class="like">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Bot%C3%B3n_Me_gusta.svg/1200px-Bot%C3%B3n_Me_gusta.svg.png" alt="">
+                        <p>좋아요!</p>
+                    </div>
+                    <div class="bad">
+                        <img src="data:image/jpeg;base64,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">
+                        <p>싫어요!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--세번째 층-->
+        <div class="review_row2">
+            <div class="row2">
+                연령대
+                <div class="row2-box"><input type="text"></div>
+            </div>
+
+            <div class="row2">
+                만족도
+                <div class="row2-box"><input type="text"></div>
+            </div>
+
+            <div class="row2">
+                성별
+                <div class="row2-box"><input type="text"></div>
+            </div>
+        </div>
+
+        <!--네번째 층-->
+        <div class="review_row3">
+            판매점 정보(구매사이트) <br>
+            <input type="text" class="row3-box">
+        </div>
+
+        <!--다섯번재 층-->
+        <div class="review_row4">
+            더 나누고 싶은 정보 <br>
+            <textarea></textarea>
+        </div>
+
+
+
+    </div>
+</body>
+</html>

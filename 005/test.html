@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 1200px;
+            border: 1px solid black;
+            margin: 0 auto;
+
+            /* header 부분 */
+        }
+        header{
+            height: 100px;
+            background-color: rgb(245, 248, 248);
+            position: relative;
+        }
+        header .img{
+            width: 200px;
+            height: 60px;
+
+            background-image: url(images/logo.png);
+            background-position: center;
+            background-size: cover;
+
+            left: 10px;
+            top: 20px;
+            position: absolute;
+        }
+
+        header .search{
+            width: 300px;
+            height: 50px;
+
+            display: flex;
+            right: 10px;
+            bottom: 20px;
+            position: absolute;
+        }
+        .search input{
+            width: 230px;
+            margin-left: 20px;
+
+            border: none;
+            outline: none;
+        }
+        .search_btn{
+            width: 50px;
+            height: 50px;
+
+            background-image: url(images/검색.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+        /* nav 부분 */
+        nav{
+            border: 1px solid black;
+            height: 40px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            background-color: rgb(232, 243, 243);
+        }
+
+        nav ul{
+            margin: 0;
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li{
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        /* section 부분 */
+        section{
+            border: 1px solid black;
+            height: 800px;
+        }
+
+        /* footer 부분 */
+        footer{
+            border: 1px solid black;
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <!-- header 영역 -->
+        <header>
+            <div class="img">
+            </div>
+            <div class="search">
+                <input type="text">
+                <div class="search_btn"></div>
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="joinus.html">회원가입</a></li>
+                <li><a href="test.html">홈으로</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            
+        </section>
+
+        <footer>
+
+        </footer>
+    </div>
+</body>
+</html>
