@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+        ul{
+            list-style: none;
+        }
+        /* header영역 */
+        header{
+            height: 100px;
+            background-color: rgb(245, 248, 248);
+            position: relative;
+        }
+        title{
+            position: absolute;
+            left: 10px;
+            top: 20px;
+        }
+        .search{
+            position: absolute;
+            right: 10px;
+            bottom: 20px;
+            display: flex;
+        }
+        .search input{
+            height: 40px;
+            border: none;
+            outline: none;
+        }
+        .search img{
+            height: 42px;
+        }
+
+        /* nav영역 */
+        nav{
+            height: 40px;
+            padding: 20px;
+            background-color: rgb(232, 243, 243);
+            /* position: relative; */
+        }
+        nav .nav_box{
+            width: 300px;
+            /* position: absolute; */
+            display: flex;
+            justify-content: space-around;
+        }
+        nav .nav_box a{
+            color: black;
+        }
+
+        /* section영역 */
+        section{
+            /* border: 1px solid black; */
+            height: 600px;
+        }
+        section .info{
+            width: 1050px;
+            margin: 0 auto;
+        }
+        section .info ul{
+            display: flex;
+            justify-content: space-around;
+            /* width: 900px; */
+            padding: 0px;
+        }
+        section .info ul li{
+            border: 0.5px solid rgb(255, 241, 241);
+            width: 350px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        section .info ul li img{
+            width: 200px;
+            height: 220px;
+        }
+        section .info ul li div{
+            background-color: black;
+            color: red;
+            width: 130px;
+            height: 25px;
+            padding: 10px;
+            font-weight: bold;
+            position: absolute;
+            top: 0px;
+        }
+
+        /* footer영역 */
+        footer{
+            height: 60px;
+            background-color: rgb(233, 239, 239);
+            display: flex;
+        }
+        footer div{
+            width: 33%;
+            height: 60px;
+            line-height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="title">
+            <img src="images/logo.png">
+        </div>
+        <div class="search">
+            <input type="text">
+            <img src="images/검색.png">
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav_box">
+            <a href="">로그인</a>
+            <a href="">회원가입</a>
+            <a href="">홈으로</a>
+        </div>
+    </nav>
+
+    <section>
+        <div class="info">
+            <ul>
+                <li>
+                    <img src="images/img01.png">
+                    <p>프로젝트기반 빅데이터 분석과정</p>
+                    <div>Bigdata</div>
+                </li>
+                <li>
+                    <img src="images/img02.png">
+                    <p>자바(JAVA)&안드로이드 개발자 양성과정</p>
+                    <div>Android</div>
+                </li>
+                <li>
+                    <img src="images/img03.png">
+                    <p>Web기반 프론트엔드 자바개발자 양성과정</p>
+                    <div>Front</div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <img src="images/footer_acorn.png">
+        </div>
+        <div>
+            (주)에이콘이즈 에이콘아카데미(홍대)
+        </div>
+        <div>
+            COPYRIGHT(C) HBILAB ALL RIGHT RESERVED.
+        </div>
+    </footer>
+</body>
+</html>

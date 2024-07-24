@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function showMyinfo( name, email, tell, address){
+            console.log(name);
+            console.log(email);
+            console.log(tell);
+            console.log(address);
+        }
+
+        function showMyinfoGrace(info){
+            console.log(info.name);
+            console.log(info.email);
+            console.log(info.tell);
+            console.log(info.address);
+        }
+
+
+        // 이름, 이메일, 전화번호, 주소
+        showMyinfo("김세현", "zxcvb1234465@naver.com", "010-2461-1437", "경기도 오산시 금암동");
+        showMyinfoGrace( {
+            name: "김세현",
+            email: "zxcvb1234465@naver.com",
+            tell: "010-2461-1437",
+            address: "경기도 오산시 금암동"
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
