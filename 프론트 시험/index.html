@@ -7,94 +7,89 @@
     <style>
         a{
             text-decoration: none;
+            color: black;
         }
         ul{
             list-style: none;
         }
+
         /* header영역 */
         header{
             height: 100px;
-            background-color: rgb(245, 248, 248);
+            background-color: rgb(245,248,248);
             position: relative;
         }
-        title{
+        header .header_title{
             position: absolute;
             left: 10px;
             top: 20px;
         }
-        .search{
+        header .header_title img{
+            width: 200px;
+        }
+        header .search{
             position: absolute;
             right: 10px;
             bottom: 20px;
             display: flex;
         }
-        .search input{
-            height: 40px;
+        header .search input{
             border: none;
             outline: none;
+            height: 40px;
         }
-        .search img{
-            height: 42px;
+        header .search img{
+            width: 60px;
+            height: 41.5px;
         }
 
         /* nav영역 */
         nav{
             height: 40px;
             padding: 20px;
-            background-color: rgb(232, 243, 243);
-            /* position: relative; */
+            background-color: rgb(232,243,243);
+            /* border: 1px solid black; */
         }
-        nav .nav_box{
-            width: 300px;
-            /* position: absolute; */
-            display: flex;
-            justify-content: space-around;
-        }
-        nav .nav_box a{
-            color: black;
+        nav .nav_link a{
+            margin-right: 30px;
         }
 
         /* section영역 */
         section{
-            /* border: 1px solid black; */
             height: 600px;
         }
-        section .info{
-            width: 1050px;
+        section ul{
+            width: 1100px;
+            display: flex;
+            flex-wrap: wrap;
             margin: 0 auto;
         }
-        section .info ul{
-            display: flex;
-            justify-content: space-around;
-            /* width: 900px; */
-            padding: 0px;
-        }
-        section .info ul li{
-            border: 0.5px solid rgb(255, 241, 241);
-            width: 350px;
+        section ul li{
+            width: 300px;
             padding: 20px;
+            border: 0.5px solid rgb(255,241,241);
             text-align: center;
             position: relative;
+            font-size: 0.95em;
         }
-        section .info ul li img{
+        section ul li img{
             width: 200px;
             height: 220px;
         }
-        section .info ul li div{
-            background-color: black;
-            color: red;
+        section ul li div{
             width: 130px;
-            height: 25px;
             padding: 10px;
-            font-weight: bold;
+            color: red;
+            background-color: black;
             position: absolute;
             top: 0px;
+            font-weight: bold;
         }
 
         /* footer영역 */
         footer{
             height: 60px;
-            background-color: rgb(233, 239, 239);
+            background-color: rgb(233,239,239);
             display: flex;
         }
         footer div{
@@ -105,26 +100,28 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="title">
+    <!-- header영역 -->
+     <header>
+        <div class="header_title">
             <img src="images/logo.png">
         </div>
         <div class="search">
             <input type="text">
             <img src="images/검색.png">
         </div>
-    </header>
+     </header>
 
-    <nav>
-        <div class="nav_box">
-            <a href="">로그인</a>
-            <a href="">회원가입</a>
-            <a href="">홈으로</a>
+     <!-- nav영역 -->
+      <nav>
+        <div class="nav_link">
+            <a href="login.html">로그인</a>
+            <a href="#">회원가입</a>
+            <a href="index.html">홈으로</a>
         </div>
-    </nav>
+      </nav>
 
-    <section>
-        <div class="info">
+      <!-- section영역 -->
+       <section>
             <ul>
                 <li>
                     <img src="images/img01.png">
@@ -142,19 +139,19 @@
                     <div>Front</div>
                 </li>
             </ul>
-        </div>
-    </section>
+       </section>
 
-    <footer>
-        <div>
-            <img src="images/footer_acorn.png">
-        </div>
-        <div>
-            (주)에이콘이즈 에이콘아카데미(홍대)
-        </div>
-        <div>
-            COPYRIGHT(C) HBILAB ALL RIGHT RESERVED.
-        </div>
-    </footer>
+       <!-- footer영역 -->
+        <footer>
+            <div>
+                <img src="images/footer_acorn.png">
+            </div>
+            <div>
+                (주)에이콘이즈 에이콘아카데미(홍대)
+            </div>
+            <div>
+                COPYRIGHT(C) HBILAB ALL RIGHTS RESERVED.
+            </div>
+        </footer>
 </body>
 </html>

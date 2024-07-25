@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        /* header영역 */
+        header{
+            height: 100px;
+            background-color: rgb(245,248,248);
+            position: relative;
+        }
+        header title{
+            position: absolute;
+            left: 10px;
+            top: 20px;
+        }
+        header .search{
+            position: absolute;
+            right: 10px;
+            bottom: 20px;
+            display: flex;
+        }
+        header .search input{
+            border: none;
+            outline: none;
+        }
+        header .search img{
+            width: 30px;
+            height: 30px;
+        }
+
+        /* nav영역 */
+        nav{
+            height: 40px;
+            padding: 20px;
+            background-color: rgb(232,243,243);
+            position: relative;
+        }
+        nav div{
+            position: absolute;
+            right: 40px;
+            line-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- header영역 -->
+     <header>
+        <div class="title">
+            <img src="../images/logo.png">
+        </div>
+        <div class="search">
+            <input type="text">
+            <img src="../images/검색.png">
+        </div>
+     </header>
+
+     <!-- nav영역 -->
+      <nav>
+        <div>
+            <a href="login.html">로그인</a>
+            │
+            <a href="index.html">홈으로</a>
+        </div>
+      </nav>
+
+      <!-- section영역 -->
+       <section>
+
+       </section>
+
+       <!-- footer영역 -->
+        <footer>
+
+        </footer>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        /* header영역 */
+        header{
+            height: 100px;
+            background-color: rgb(245,248,248);
+            position: relative;
+        }
+        header title{
+            position: absolute;
+            left: 10px;
+            top: 20px;
+        }
+        header .search{
+            position: absolute;
+            right: 10px;
+            bottom: 20px;
+            display: flex;
+            border: 1px solid black;
+        }
+        header .search input{
+            width: 150px;
+            border: none;
+            outline: none;
+        }
+        header .search img{
+            width: 30px;
+            height: 30px;
+        }
+
+        /* nav영역 */
+        nav{
+            height: 40px;
+            padding: 20px;
+            background-color: rgb(232,243,243);
+            position: relative;
+        }
+        nav div{
+            position: absolute;
+            right: 40px;
+            line-height: 40px;
+        }
+
+        /* section영역 */
+        section{
+            width: 1300px;
+            height: 600px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+        section ul{
+            display: flex;
+            
+        }
+        section ul li{
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            border: 0.5px solid rgb(255,241,241);
+            font-size: 0.95em;
+            position: relative;
+        }
+        section ul li .box{
+            width: 130px;
+            padding: 10px;
+            border: 1px solid black;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            position: absolute;
+            top: 0px;
+            right: 10px;
+            background-color: lightyellow;
+            color: red;
+            font-weight: bold;
+        }
+
+        /* footer영역 */
+        footer{
+            padding: 20px;
+            background-color: rgb(233,239,239);
+            display: flex;
+        }
+        footer div{
+            width: 33%;
+        }
+    </style>
+</head>
+<body>
+    <!-- header영역 -->
+     <header>
+        <div class="title">
+            <img src="../images/logo.png">
+        </div>
+        <div class="search">
+            <input type="text">
+            <img src="../images/검색.png">
+        </div>
+     </header>
+
+     <!-- nav영역 -->
+      <nav>
+        <div>
+            <a href="login.html">로그인</a>
+            │
+            <a href="index.html">홈으로</a>
+        </div>
+      </nav>
+
+      <!-- section영역 -->
+       <section>
+            <ul>
+                <li>
+                    <img src="../images/img01.png">
+                    <p>프로젝트기반 빅데이터 분석과정</p>
+                    <div class="box">Bigdata</div>
+                </li>
+                <li>
+                    <img src="../images/img01.png">
+                    <p>자바(JAVA)&안드로이드 개발자 양성과정</p>
+                    <div class="box">Android</div>
+                </li>
+                <li>
+                    <img src="../images/img01.png">
+                    <p>Web기반 프론트엔드 자바개발자 양성과정</p>
+                    <div class="box">Front</div>
+                </li>
+            </ul>
+
+       </section>
+
+       <!-- footer영역 -->
+        <footer>
+            <div><img src="../images/footer_acorn.png"></div>
+            <div>에이콘ACADEMY(홍대)</div>
+            <div>COPYRIGHT(C) HBILAB RESERVED</div>
+        </footer>
+</body>
+</html>
